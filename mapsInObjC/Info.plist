@@ -4,6 +4,10 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
+	<key>MGLMapboxAccessToken</key>
+	<string>pk.eyJ1Ijoiam9yZGFua2lsZXkiLCJhIjoiY2lzcWpxeDllMDIwNDJ0bXE4bG52OXFuZCJ9.Y-blCodeA0EpbJSfgc2Qtw</string>
+	<key>CFBundleDisplayName</key>
+	<string>mapsInObjC</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
