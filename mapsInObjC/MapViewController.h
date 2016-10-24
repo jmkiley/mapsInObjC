@@ -10,5 +10,9 @@
 @import Mapbox;
 
 @interface MapViewController : UIViewController
-    
+@property (strong, nonatomic) IBOutlet MGLMapView *mapView;
+@property (nonatomic, readwrite) MGLMapView *selectedStyle;
+@property (nonatomic, readwrite) NSArray *timesSquarePlaces;
+- (void)setupMap;
+- (void)addAnnotations;
 @end

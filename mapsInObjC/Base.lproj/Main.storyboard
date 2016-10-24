@@ -23,7 +23,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="28Y-QW-W78" kind="show" id="pRr-yQ-f0e"/>
+                                    <segue destination="28Y-QW-W78" kind="show" identifier="Default" id="pRr-yQ-f0e"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -36,7 +36,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aHl-W7-YXI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1228" y="339.58020989505252"/>
+            <point key="canvasLocation" x="1092" y="340"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="1cu-qW-hPM">
@@ -46,11 +46,14 @@
                         <viewControllerLayoutGuide type="top" id="OSO-BA-Lda"/>
                         <viewControllerLayoutGuide type="bottom" id="aE8-aN-azW"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="QYT-jA-30D">
+                    <view key="view" contentMode="scaleToFill" id="QYT-jA-30D" customClass="MGLMapView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="QYT-jA-30D" id="Xs8-H7-sFl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="suC-zd-eLv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

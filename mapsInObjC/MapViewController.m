@@ -10,26 +10,65 @@
 
 @interface MapViewController () <MGLMapViewDelegate>
 
+
+
 @end
 
 @implementation MapViewController
 
+@synthesize selectedStyle;
+@synthesize mapView;
+@synthesize timesSquarePlaces;
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view.
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    MGLMapView *mapView = [[MGLMapView alloc] initWithFrame:self.view.bounds styleURL:[MGLStyle lightStyleURLWithVersion:9]];
-    mapView.autoresizingMask = UIViewAutoresizingFlexibleWidth| UIViewAutoresizingFlexibleHeight;
-    mapView.tintColor = [UIColor greenColor];
-    mapView.delegate = self;
-    [self.view addSubview:mapView];
+    [self setupMap];
+    
+    
+    
+    
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)setupMap {
+    [mapView setStyleURL:[MGLStyle lightStyleURLWithVersion:8]];
+    mapView.autoresizingMask = UIViewAutoresizingFlexibleWidth| UIViewAutoresizingFlexibleHeight;
+    mapView.tintColor = [UIColor greenColor];
+    mapView.delegate = self;
+    mapView.showsUserLocation = true;
+
+    [mapView setCenterCoordinate:mapView.userLocation.coordinate zoomLevel:7 animated:true];
+
+    [mapView setUserTrackingMode:MGLUserTrackingModeFollow];
+    
+    [self addAnnotations];
+}
+
+- (void)addAnnotations {
+    MGLPointAnnotation *tkts = [[MGLPointAnnotation alloc] init];
+    tkts.title = @"TKTS Times Square";
+    tkts.coordinate = CLLocationCoordinate2DMake(40.759546, -73.984840);
+    
+    MGLPointAnnotation *hamilton = [[MGLPointAnnotation alloc] init];
+    hamilton.title = @"Hamilton";
+    hamilton.coordinate = CLLocationCoordinate2DMake(40.759276, -73.986772);
+    
+    MGLPointAnnotation *marriott = [[MGLPointAnnotation alloc] init];
+    marriott.title = @"Marriott Marquis";
+    marriott.coordinate = CLLocationCoordinate2DMake(40.758965, -73.986262);
+    
+    timesSquarePlaces = @[tkts, hamilton, marriott];
+    
+    [mapView addAnnotations:timesSquarePlaces];
+}
+
 
 /*
 #pragma mark - Navigation

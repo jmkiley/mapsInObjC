@@ -11,5 +11,7 @@
 
 @interface MapsTableViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic) NSArray *arrayOfMapTypes;
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+//@property (readwrite, strong) NSArray *arrayOfMapTypes;
+//@property (nonatomic, strong) NSString *selectedStyle;
 @end

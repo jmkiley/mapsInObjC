@@ -16,6 +16,9 @@
 		3EA592121DB901BF00741A4A /* mapsInObjCUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA592111DB901BF00741A4A /* mapsInObjCUITests.m */; };
 		3EA592A91DBA980F00741A4A /* MapsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA592A81DBA980F00741A4A /* MapsTableViewController.m */; };
 		3EA592AC1DBA98F200741A4A /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA592AB1DBA98F200741A4A /* MapViewController.m */; };
+		3EA592B21DBC01F600741A4A /* MapStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA592B11DBC01F600741A4A /* MapStyle.m */; };
+		3EA592B51DBC037F00741A4A /* DefaultMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA592B41DBC037F00741A4A /* DefaultMapView.m */; };
+		3EA592BB1DBE7F6E00741A4A /* Annotations.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA592BA1DBE7F6E00741A4A /* Annotations.m */; };
 		6CEEF1ADEC32B6BE7C623BF8 /* libPods-mapsInObjC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 36A9D12BB0D4C8EE246B535F /* libPods-mapsInObjC.a */; };
 		7D95E43E0099B19F6864C610 /* libPods-mapsInObjCTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A41A5350E131C6AAB430620 /* libPods-mapsInObjCTests.a */; };
 		FC786FA678E45DF1C5E45F23 /* libPods-mapsInObjCUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2FB617ACAD97C18B34C60CC /* libPods-mapsInObjCUITests.a */; };
@@ -60,6 +63,12 @@
 		3EA592A81DBA980F00741A4A /* MapsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapsTableViewController.m; sourceTree = "<group>"; };
 		3EA592AA1DBA98F200741A4A /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		3EA592AB1DBA98F200741A4A /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		3EA592B01DBC01F600741A4A /* MapStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapStyle.h; sourceTree = "<group>"; };
+		3EA592B11DBC01F600741A4A /* MapStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapStyle.m; sourceTree = "<group>"; };
+		3EA592B31DBC037F00741A4A /* DefaultMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultMapView.h; sourceTree = "<group>"; };
+		3EA592B41DBC037F00741A4A /* DefaultMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultMapView.m; sourceTree = "<group>"; };
+		3EA592B91DBE7F6E00741A4A /* Annotations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Annotations.h; sourceTree = "<group>"; };
+		3EA592BA1DBE7F6E00741A4A /* Annotations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Annotations.m; sourceTree = "<group>"; };
 		5F4F07F5E5C156932AF9A976 /* Pods-mapsInObjC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mapsInObjC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mapsInObjC/Pods-mapsInObjC.debug.xcconfig"; sourceTree = "<group>"; };
 		614EB67F1B37AACEBFB0F205 /* Pods-mapsInObjC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mapsInObjC.release.xcconfig"; path = "Pods/Target Support Files/Pods-mapsInObjC/Pods-mapsInObjC.release.xcconfig"; sourceTree = "<group>"; };
 		6A41A5350E131C6AAB430620 /* libPods-mapsInObjCTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mapsInObjCTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,8 +147,14 @@
 				3EA591F01DB901BF00741A4A /* AppDelegate.m */,
 				3EA592A71DBA980F00741A4A /* MapsTableViewController.h */,
 				3EA592A81DBA980F00741A4A /* MapsTableViewController.m */,
+				3EA592B01DBC01F600741A4A /* MapStyle.h */,
+				3EA592B11DBC01F600741A4A /* MapStyle.m */,
 				3EA591F51DB901BF00741A4A /* Main.storyboard */,
 				3EA591F81DB901BF00741A4A /* Assets.xcassets */,
+				3EA592B31DBC037F00741A4A /* DefaultMapView.h */,
+				3EA592B91DBE7F6E00741A4A /* Annotations.h */,
+				3EA592BA1DBE7F6E00741A4A /* Annotations.m */,
+				3EA592B41DBC037F00741A4A /* DefaultMapView.m */,
 				3EA592AA1DBA98F200741A4A /* MapViewController.h */,
 				3EA592AB1DBA98F200741A4A /* MapViewController.m */,
 				3EA591FA1DB901BF00741A4A /* LaunchScreen.storyboard */,
@@ -450,9 +465,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EA592B51DBC037F00741A4A /* DefaultMapView.m in Sources */,
 				3EA591F11DB901BF00741A4A /* AppDelegate.m in Sources */,
+				3EA592BB1DBE7F6E00741A4A /* Annotations.m in Sources */,
 				3EA591EE1DB901BF00741A4A /* main.m in Sources */,
 				3EA592A91DBA980F00741A4A /* MapsTableViewController.m in Sources */,
+				3EA592B21DBC01F600741A4A /* MapStyle.m in Sources */,
 				3EA592AC1DBA98F200741A4A /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

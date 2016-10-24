@@ -7,22 +7,30 @@
 //
 
 #import "MapsTableViewController.h"
+#import "MapViewController.h"
+
+#import "MapStyle.h"
 
 @interface MapsTableViewController ()
 
 @end
 
 @implementation MapsTableViewController {
-    
     NSArray *arrayOfMapTypes;
+    NSString *selectedStyle;
 }
 
+//@synthesize arrayOfMapTypes;
+//@synthesize selectedStyle;
+@synthesize tableView;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
-    arrayOfMapTypes = [NSArray arrayWithObjects: @"Default Map", @"Custom Annotation", nil];
+//    MapStyle *default = MapStyle.ini
+    
+    arrayOfMapTypes = [NSArray arrayWithObjects: @"DefaultMapView", @"Custom Annotation", nil];
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
@@ -53,6 +61,12 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"You selected row \(indexPath.row)");
+    selectedStyle = arrayOfMapTypes[indexPath.row];
+//    [self performSegueWithIdentifier:@"Default" sender:self];
+    
+}
 
 /*
 // Override to support conditional editing of the table view.
@@ -88,14 +102,17 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
+    // NSIndexPath *index = [self.tableView indexPathForSelectedRow];
     // Pass the selected object to the new view controller.
+    MapViewController *vc = [segue destinationViewController];
+//    vc.selectedStyle = (MGLMapView *)[arrayOfMapTypes objectAtIndex:index.row];
 }
-*/
+
 
 @end
