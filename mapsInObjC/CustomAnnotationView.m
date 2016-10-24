@@ -6,9 +6,9 @@
 //
 //
 
-#import "Annotations.h"
+#import "CustomAnnotationView.h"
 
-@implementation Annotations
+@implementation CustomAnnotationView
 
 /*
 // Only override drawRect: if you perform custom drawing.

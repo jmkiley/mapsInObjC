@@ -8,6 +8,6 @@
 
 #import <Mapbox/Mapbox.h>
 
-@interface Annotations : MGLAnnotationView
+@interface CustomAnnotationView : MGLAnnotationView
 
 @end

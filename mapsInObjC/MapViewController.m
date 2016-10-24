@@ -37,6 +37,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+#pragma mark - Default Map Setup
 - (void)setupMap {
     [mapView setStyleURL:[MGLStyle lightStyleURLWithVersion:8]];
     mapView.autoresizingMask = UIViewAutoresizingFlexibleWidth| UIViewAutoresizingFlexibleHeight;
@@ -51,6 +53,7 @@
     [self addAnnotations];
 }
 
+#pragma mark - Annotation Setup and Customization
 - (void)addAnnotations {
     MGLPointAnnotation *tkts = [[MGLPointAnnotation alloc] init];
     tkts.title = @"TKTS Times Square";
@@ -69,7 +72,34 @@
     [mapView addAnnotations:timesSquarePlaces];
 }
 
+- (MGLAnnotationView *)mapView:(MGLMapView *)mapView viewForAnnotation:(id<MGLAnnotation>)annotation {
+    // Checks that annotation is MGLPointAnnotation
+    if (![annotation isKindOfClass:[MGLPointAnnotation class]]) {
+        return nil;
+    }
+    
+    NSString *reuseIdentifier = annotation.title;
+    
+    CustomAnnotationView *annotationView = [mapView dequeueReusableAnnotationViewWithIdentifier:reuseIdentifier];
+    //Initializes annotation view if there isn't one
+    if(!annotationView) {
+        annotationView = [[CustomAnnotationView alloc] initWithReuseIdentifier:reuseIdentifier];
+        annotationView.frame = CGRectMake(0, 0, 20, 20);
+        
+        // Give the Annotation a background color - it is transparent without it
+        
+        annotationView.backgroundColor = [UIColor colorWithRed:0.1 green:0.5 blue:1.0 alpha:0.76];
+        
+    }
+    
+    
+    
+    return annotationView;
+}
 
+- (BOOL)mapView:(MGLMapView *)mapView annotationCanShowCallout:(id<MGLAnnotation>)annotation {
+    return true;
+}
 /*
 #pragma mark - Navigation
 
